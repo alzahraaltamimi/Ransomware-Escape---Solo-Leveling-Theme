@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ransomware Escape - Solo Leveling Theme</title>
+    <link rel="stylesheet" href="cysawareness.css">
+</head>
+<body>
+    <div class="lightning"></div>
+    <div class="game-container">
+        <h1>⚔️ Ransomware Escape 🔐</h1>
+        <p>The hacker <b>"Locked your files!"</b> 
+            Find the <b>"Decryption key"</b> <br> Before time runs out!</p>
+        <div id="timer-container">⏳ Time Left: <span id="timer">60</span> seconds</div>
+
+        <div id="encrypted-file">
+            <h3>🔒 Encrypted File:</h3>
+            <pre id="file-text">U29sbyBMZXZlbGluZw==</pre>
+        </div>
+
+        <div class="options">
+            <button id="decrypt-btn">🛠️ Decrypt File</button>
+            <button id="hint-btn">💡 Hint</button>
+            <button id="hack-btn">💻 Counter-Hack</button>
+            <button id="pay-btn">💰 Pay Ransom</button>
+        </div>
+
+        <div id="input-container" class="hidden">
+            <input type="text" id="decryption-input" placeholder="Enter decrypted key here..." />
+            <button id="submit-decrypt">Submit</button>
+        </div>
+
+        <div id="hint-container" class="hidden">
+            <p>🔎 Try viweing source code page:<br>Something related to Right-click to view it!</p>
+        </div>
+        <div id="hidden hint" class="hidden">
+            <p>💡 The key is hidden using base64. Use base64 decoder <a href="https://www.base64decode.net/"></a> </p>
+        </div>
+        <div id="result" class="hidden">
+            <h2 id="result-message"></h2>
+            <button id="restart-btn">🔄 Play Again</button>
+        </div>
+    </div>
+
+    <script src="cysawareness.js"></script>
+</body>
+</html>

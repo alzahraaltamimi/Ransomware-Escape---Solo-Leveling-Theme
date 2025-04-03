@@ -1,0 +1,132 @@
+/* Dark Background with Thunder Effect */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Thunder Animation */
+@keyframes lightning {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    opacity: 0;
+    animation: lightning 1.5s infinite;
+}
+
+/* Overlay for Better Visibility */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Game Container */
+.game-container {
+    background: linear-gradient(135deg, #191919d6, #300046);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(128, 0, 128, 0.373);
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Timer */
+#timer-container {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff007f;
+}
+
+/* Buttons */
+.options button {
+    background: linear-gradient(90deg, #880c4a, #8a2be2);
+    color: white;
+    border: none;
+    padding: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+#submit-decrypt{ 
+    background: linear-gradient(90deg, #e4dfe5, #e4dfe5);
+    color: black;
+    border: none;
+    padding: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.3s;
+} 
+#restart-btn {
+    background: linear-gradient(90deg, #d21cfa, #670c7b);
+    color: white;
+    border: none;
+    padding: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: 0.3s;
+} 
+
+.options button:hover{
+    background: linear-gradient(90deg, #d000ff, #4b0082);
+}
+#restart-btn:hover
+{
+    background: linear-gradient(90deg, #ff0011, #82003b);
+}
+#submit-decrypt:hover{
+    background: rgb(156, 159, 162);
+}
+/* Decryption Input */
+#decryption-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 80%;
+    border: 2px solid #7e139c;
+    background-color: #1a1a1a;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hidden { display: none; }
+
+/* Success Message */
+.success-text { color: #00ff00; text-shadow: 0 0 10px #00ff00; }
+
+.error-text {
+    color: #e32c2c;  /* Bright red */
+    text-shadow: 0 0 10px #f73d3de4;
+    font-weight: bold;
+}
