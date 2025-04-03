@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let timeLeft = 60;
+    let timeLeft = 180;
     const timerElement = document.getElementById("timer");
     const resultMessage = document.getElementById("result-message");
     const decryptBtn = document.getElementById("decrypt-btn");
